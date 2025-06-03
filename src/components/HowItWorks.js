@@ -121,7 +121,8 @@ const HowItWorks = () => {
           <motion.div
             key={step.number}
             initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.5, delay: index * 0.2 }}
           >
             <StepCard>
@@ -133,11 +134,14 @@ const HowItWorks = () => {
                   backgroundColor: '#FF6B00',
                   color: 'white',
                   borderColor: '#FF6B00',
-                  transition: {
-                    type: 'spring',
-                    stiffness: 300,
-                    damping: 10
-                  }
+                  transition: { type: 'spring', stiffness: 300, damping: 10 }
+                }}
+                whileTap={{
+                  scale: 1.1,
+                  backgroundColor: '#FFD6B3',
+                  color: '#1E3A8A',
+                  borderColor: '#FF6B00',
+                  transition: { type: 'spring', stiffness: 300, damping: 10 }
                 }}
               >
                 {step.number}
