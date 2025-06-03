@@ -11,6 +11,14 @@ const AboutSection = styled.section`
   align-items: center;
   position: relative;
   overflow: hidden;
+  @media (max-width: 900px) {
+    flex-direction: column;
+    padding: 60px 2%;
+    gap: 20px;
+  }
+  @media (max-width: 600px) {
+    padding: 30px 1%;
+  }
 `;
 
 const ImageContainer = styled.div`
@@ -55,6 +63,11 @@ const ContentContainer = styled.div`
   flex: 1;
   padding-left: 40px;
   padding-right: 80px;
+  @media (max-width: 900px) {
+    padding-left: 0;
+    padding-right: 0;
+    text-align: center;
+  }
 `;
 
 const Title = styled.h2`
@@ -62,6 +75,12 @@ const Title = styled.h2`
   color: #1E3A8A;
   margin-bottom: 30px;
   line-height: 1.2;
+  @media (max-width: 900px) {
+    font-size: 28px;
+  }
+  @media (max-width: 600px) {
+    font-size: 20px;
+  }
 `;
 
 const Description = styled.p`

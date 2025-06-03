@@ -28,6 +28,25 @@ const HeroSection = styled.section`
     background: linear-gradient(45deg, rgba(255, 107, 0, 0.1), rgba(0, 0, 0, 0.3));
     z-index: 1;
   }
+  @media (max-width: 900px) {
+    flex-direction: column;
+    height: auto;
+    padding: 60px 2%;
+    border-top-left-radius: 120px;
+  }
+  @media (max-width: 600px) {
+    padding: 40px 1%;
+    border-top-left-radius: 60px;
+  }
+  @media (max-width: 700px) {
+    padding: 40px 0 20px 0;
+    min-height: 80vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 24px;
+    background-position: center top;
+  }
 `;
 
 const HeroContent = styled.div`
@@ -36,6 +55,30 @@ const HeroContent = styled.div`
   z-index: 2;
   max-width: 600px;
   margin-top: 60px;
+  @media (max-width: 900px) {
+    margin-top: 20px;
+    max-width: 100%;
+    text-align: center;
+  }
+  @media (max-width: 700px) {
+    align-items: center;
+    text-align: center;
+    padding: 0 16px;
+    h1 {
+      font-size: 2rem;
+      line-height: 2.4rem;
+      margin-bottom: 12px;
+    }
+    p {
+      font-size: 1rem;
+      margin-bottom: 18px;
+    }
+    button {
+      width: 100%;
+      font-size: 1rem;
+      padding: 12px 0;
+    }
+  }
 `;
 
 const HeroTitle = styled.h1`
@@ -43,6 +86,12 @@ const HeroTitle = styled.h1`
   font-weight: bold;
   line-height: 1.2;
   margin-bottom: 1.5rem;
+  @media (max-width: 900px) {
+    font-size: 2.2rem;
+  }
+  @media (max-width: 600px) {
+    font-size: 1.5rem;
+  }
 `;
 
 const HeroSubtitle = styled.p`
@@ -100,6 +149,14 @@ const HeroImageContainer = styled.div`
     padding: 0;
     transition: transform 0.1s ease-out;
   }
+  @media (max-width: 900px) {
+    width: 100%;
+    img {
+      width: 100vw;
+      height: auto;
+      max-width: 350px;
+    }
+  }
 `;
 
 const OrangeCircle = styled.div`
@@ -128,6 +185,9 @@ const FloatingElement1 = styled(ParallaxElement)`
   right: 15%;
   width: 30px;
   height: 30px;
+  @media (max-width: 700px) {
+    display: none;
+  }
 `;
 
 const FloatingElement2 = styled(ParallaxElement)`
@@ -142,6 +202,9 @@ const FloatingElement3 = styled(ParallaxElement)`
   right: 30%;
   width: 25px;
   height: 25px;
+  @media (max-width: 700px) {
+    display: none;
+  }
 `;
 
 const Hero = () => {
