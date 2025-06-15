@@ -138,8 +138,8 @@ const HowItWorks = () => {
                 }}
                 whileTap={{
                   scale: 1.1,
-                  backgroundColor: '#FFD6B3',
-                  color: '#1E3A8A',
+                  backgroundColor: '#FF6B00',
+                  color: 'white',
                   borderColor: '#FF6B00',
                   transition: { type: 'spring', stiffness: 300, damping: 10 }
                 }}

@@ -18,7 +18,7 @@ const Navbar = () => {
   return (
     <Nav>
       <Logo>
-        <img src="/Layer_1.png" alt="Diesel Onsite" />
+        <img src="/Layer_1 copy.png" alt="Diesel Onsite" />
       </Logo>
       <RightSection>
         
@@ -165,7 +165,7 @@ const MobileNavLinks = styled.div`
 
 const Logo = styled.div`
   img {
-    height: 40px;
+    height: 50px;
   }
 `;
 

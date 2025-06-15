@@ -31,7 +31,7 @@ const Column = styled.div`
 `;
 
 const Logo = styled.img`
-  height: 32px;
+  height: 50px;
   width: auto;
   margin-bottom: 20px;
   object-fit: contain;

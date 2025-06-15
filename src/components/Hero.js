@@ -16,7 +16,6 @@ const HeroSection = styled.section`
   background-repeat: no-repeat;
   border-top-left-radius: 300px;
   overflow: hidden;
-  background-attachment: fixed;
   
   &::before {
     content: '';
@@ -25,7 +24,6 @@ const HeroSection = styled.section`
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(45deg, rgba(255, 107, 0, 0.1), rgba(0, 0, 0, 0.3));
     z-index: 1;
   }
   @media (max-width: 900px) {

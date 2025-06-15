@@ -6,7 +6,6 @@ import useParallax from '../hooks/useParallax';
 const AboutSection = styled.section`
   display: flex;
   padding: 100px 5%;
-  background: #fff;
   gap: 50px;
   align-items: center;
   position: relative;
@@ -26,6 +25,7 @@ const ImageContainer = styled.div`
   position: relative;
   
   img {
+    
     width: 100%;
     max-width: 500px;
     height: auto;
@@ -71,10 +71,16 @@ const ContentContainer = styled.div`
 `;
 
 const Title = styled.h2`
-  font-size: 40px;
   color: #1E3A8A;
   margin-bottom: 30px;
-  line-height: 1.2;
+  width: 515;
+height: 91;
+top: -2px;
+font-weight: 700;
+font-size: 38.91px;
+line-height: 44px;
+letter-spacing: -1px;
+
   @media (max-width: 900px) {
     font-size: 28px;
   }
@@ -84,11 +90,21 @@ const Title = styled.h2`
 `;
 
 const Description = styled.p`
-  font-size: 15px;
-  
-  color: #64748B;
-  margin-bottom: 20px;
-  line-height: 1.6;
+  color:#6F6F87;
+font-weight: 700;
+font-size: 13.95px;
+line-height: 22.5px;
+letter-spacing: 0.48px;
+
+  width: 440;
+height: 213;
+top: 222.05px;
+left: 15px;
+width: 440;
+height: 213;
+top: 222.05px;
+left: 15px;
+
 `;
 
 
@@ -134,6 +150,8 @@ const About = () => {
           <Description>
             CBL Automobiles proudly introduced DieselOnSite to revolutionize fuel delivery in the Delhi NCR region. Founded with a vision to eliminate the hassles of traditional fuel procurement, we bring diesel directly to your doorstep.
           </Description>
+          <br />
+
           <Description>
             We are committed to providing efficient, safe, and environmentally responsible fuel delivery services, setting new standards in the industry through innovation and customer-focused solutions.
           </Description>

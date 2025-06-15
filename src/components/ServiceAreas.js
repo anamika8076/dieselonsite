@@ -49,7 +49,6 @@ const ServiceAreas = () => {
 
 const ServiceAreasSection = styled.section`
   padding: 100px 5%;
-  background: #fff;
   text-align: center;
   margin-bottom: 55px;
 `;

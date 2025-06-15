@@ -15,6 +15,7 @@ const GlobalStyles = createGlobalStyle`
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
+    max-hieght:100px;
   }
 
   html {

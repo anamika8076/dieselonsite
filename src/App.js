@@ -12,12 +12,17 @@ import Reviews from './components/Reviews';
 import FAQ from './components/FAQ';
 import Footer from './components/Footer';
 import './App.css';
+import ContactModal from './components/ContactModal';
 
 const MainContainer = styled.div`
   width: 100%;
   overflow-x: hidden;
 `;
-
+const ContentWrapper = styled.div`
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+`;
 function App() {
   useEffect(() => {
     // Smooth scrolling for the entire page
@@ -33,13 +38,16 @@ function App() {
       <GlobalStyles />
       <Navbar />
       <Hero />
-      <About />
-      <Services />
-      <ServiceAreas />
-      <WhyChoose />
-      <HowItWorks />
-      <Reviews />
-      <FAQ />
+
+      <ContentWrapper>
+        <About />
+        <Services />
+        <ServiceAreas />
+        <WhyChoose />
+        <HowItWorks />
+        <Reviews />
+        <FAQ />
+      </ContentWrapper>
       <Footer />
     </MainContainer>
   );

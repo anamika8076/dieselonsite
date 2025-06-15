@@ -102,7 +102,6 @@ const Reviews = () => {
 
 const ReviewsSection = styled.section`
   padding: 80px 5%;
-  background: #fff;
 `;
 
 const ReviewsContainer = styled.div`

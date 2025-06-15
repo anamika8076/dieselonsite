@@ -3,7 +3,6 @@ import { motion } from 'framer-motion';
 
 const ServicesSection = styled.section`
   padding: 100px 5%;
-  background: #F8FAFC;
 `;
 
 const Title = styled.h2`
@@ -35,6 +34,11 @@ const ServiceCard = styled.div`
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  align-items: stretch;
+  min-height: 270px; /* Adjust as needed for your content */
 
   &:hover {
     transform: translateY(-5px);

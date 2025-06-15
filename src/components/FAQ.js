@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import { motion, AnimatePresence } from 'framer-motion';
+import ContactModal from './ContactModal'; // Make sure the path is correct
 
 const FAQSection = styled.section`
   padding: 80px 20px;
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 0 auto;
 `;
 
@@ -61,10 +62,10 @@ const Answer = styled(motion.div)`
 `;
 
 const ContactButton = styled.button`
-  background-color: #E65525;
+  background-color: #FF6B00;
   color: white;
   border: none;
-  border-radius: 8px;
+  border-radius: 25px;
   padding: 16px 32px;
   font-size: 1rem;
   cursor: pointer;
@@ -79,6 +80,7 @@ const ContactButton = styled.button`
 
 const FAQ = () => {
   const [openQuestion, setOpenQuestion] = useState(null);
+  const [showModal, setShowModal] = useState(false);
 
   const faqData = [
     {
@@ -121,11 +123,11 @@ const FAQ = () => {
             <QuestionHeader onClick={() => toggleQuestion(faq.id)}>
               <Question>{faq.question}</Question>
               <PlusIcon
-                animate={{ 
+                animate={{
                   rotate: openQuestion === faq.id ? 45 : 0,
                   scale: openQuestion === faq.id ? 1.1 : 1
                 }}
-                transition={{ 
+                transition={{
                   type: "spring",
                   stiffness: 300,
                   damping: 20
@@ -138,8 +140,8 @@ const FAQ = () => {
               {openQuestion === faq.id && (
                 <Answer
                   initial={{ height: 0, opacity: 0 }}
-                  animate={{ 
-                    height: "auto", 
+                  animate={{
+                    height: "auto",
                     opacity: 1,
                     transition: {
                       height: {
@@ -153,8 +155,8 @@ const FAQ = () => {
                       }
                     }
                   }}
-                  exit={{ 
-                    height: 0, 
+                  exit={{
+                    height: 0,
                     opacity: 0,
                     transition: {
                       height: {
@@ -178,8 +180,10 @@ const FAQ = () => {
       </FAQContainer>
       <div style={{ textAlign: 'center', marginTop: '40px' }}>
         <p>Still have questions?</p>
-        <ContactButton>Contact Support</ContactButton>
+        <ContactButton onClick={() => setShowModal(true)}>Contact Support</ContactButton>
       </div>
+
+      <ContactModal show={showModal} onClose={() => setShowModal(false)} />
     </FAQSection>
   );
 };

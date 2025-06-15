@@ -33,15 +33,13 @@ const WhyChoose = () => {
     <WhyChooseSection>
       <LeftContent>
         <motion.img
-          src="/90046eb2-fe21-4f2a-815b-f563aa95504a 1.png"
+          src="/Group 42.png"
           alt="Fuel Nozzle"
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
         />
-        <Title>Why Choose<br />DieselOnSite?</Title>
-        <Subtitle>We go beyond just delivery - we provide peace of mind with safe, convenient, and timely service.</Subtitle>
-      </LeftContent>
+            </LeftContent>
       
       <RightContent>
         {features.map((feature, index) => (
@@ -64,7 +62,6 @@ const WhyChoose = () => {
 
 const WhyChooseSection = styled.section`
   padding: 100px 5%;
-  background: #F8FAFC;
   display: flex;
   gap: 50px;
   align-items: center;
@@ -80,7 +77,7 @@ const LeftContent = styled.div`
   
   img {
     width: 100%;
-    max-width: 400px;
+    max-width: 1000px;
     height: auto;
     margin-bottom: 30px;
   }
@@ -107,7 +104,7 @@ const RightContent = styled.div`
 `;
 
 const FeatureCard = styled.div`
-  background: #FF6B00;
+  background: linear-gradient(45deg, #FF6B00 0%, #FF8900 100%);
   padding: 15px;
   border-radius: 10px;
   color: white;
